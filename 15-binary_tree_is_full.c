@@ -16,7 +16,9 @@ int is_full_recursive(const binary_tree_t *tree)
 			(tree->left == NULL && tree->right != NULL) ||
 			is_full_recursive(tree->left) == 0 ||
 			is_full_recursive(tree->right) == 0)
-				return (0);
+		{
+			return (0);
+		}
 		return (1);
 	}
 	return (1);
