@@ -17,7 +17,9 @@ int is_full_recursive(const binary_tree_t *tree)
 			is_full_recursive(tree->left) == 0 ||
 			is_full_recursive(tree->right) == 0)
 				return (0);
+		return (1);
 	}
+	return (1);
 }
 
 /**
@@ -28,7 +30,7 @@ int is_full_recursive(const binary_tree_t *tree)
  *         Otherwise - 1.
  */
 
-int binary_tree_full(const binary_tree_t *tree)
+int binary_tree_is_full(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (0);
